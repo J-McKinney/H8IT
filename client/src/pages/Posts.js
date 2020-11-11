@@ -57,7 +57,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Post A Vent:</h1>
             </Jumbotron>
             <form>
               <Input
@@ -86,7 +86,7 @@ class Books extends Component {
             </Jumbotron>
             {this.state.posts.length ? (
               <List>
-                {this.state.posts.map(book => (
+                {this.state.posts.map(post => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
