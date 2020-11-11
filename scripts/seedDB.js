@@ -4,7 +4,7 @@ const db = require("../models");
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/H8IT"
+  process.env.MONGODB_URI || "mongodb://localhost/Vent"
 );
 
 const userPostSeed = [
@@ -28,8 +28,8 @@ const userPostSeed = [
   },
 ];
 
-db.UserPost.remove({})
-  .then(() => db.UserPost.collection.insertMany(userPostSeed))
+db.Post.remove({})
+  .then(() => db.Post.collection.insertMany(userPostSeed))
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

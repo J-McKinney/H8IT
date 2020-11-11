@@ -7,6 +7,6 @@ const postSchema = new Schema({
   date: { type: Date, default: Date.now },
 });
 
-const UserPost = mongoose.model("UserPost", postSchema);
+const Post = mongoose.model("Post", postSchema);
 
-module.exports = UserPost;
+module.exports = Post;

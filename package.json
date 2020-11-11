@@ -1,5 +1,5 @@
 {
-  "name": "H8IT",
+  "name": "Vent",
   "version": "0.1.0",
   "description": "",
   "main": "server.js",
@@ -26,24 +26,9 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.13",
-    "if-env": "^1.0.4"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not ie <= 11",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "if-env": "^1.0.4",
+    "mongoose": "^5.10.13"
   }
 }
