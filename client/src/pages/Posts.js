@@ -5,49 +5,53 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, TextArea, FormBtn, CharLeft } from "../components/Form";
 
 class Books extends Component {
   state = {
     posts: [],
-    userName: "",
-    userPost: ""
+    postTitle: "",
+    userPost: "",
+    charLeft: 600,
   };
 
   componentDidMount() {
     this.loadPosts();
   }
+  componentDidUpdate() {
+    console.log("Update: " + this.state.charLeft);
+  }
 
   loadPosts = () => {
     API.getUserPosts()
-      .then(res =>
-        this.setState({ posts: res.data, userName: "", userPost: "" })
+      .then((res) =>
+        this.setState({ posts: res.data, postTitle: "", userPost: "" })
       )
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
-  deleteUserPost = id => {
+  deleteUserPost = (id) => {
     API.deleteUserPost(id)
-      .then(res => this.loadPosts())
-      .catch(err => console.log(err));
+      .then((res) => this.loadPosts())
+      .catch((err) => console.log(err));
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
-  handleFormSubmit = event => {
+  handleFormSubmit = (event) => {
     event.preventDefault();
-    if (this.state.userName) {
+    if (this.state.postTitle) {
       API.saveUserPost({
-        userName: this.state.userName,
-        userPost: this.state.userPost
+        postTitle: this.state.postTitle,
+        userPost: this.state.userPost,
       })
-        .then(res => this.loadPosts())
-        .catch(err => console.log(err));
+        .then((res) => this.loadPosts())
+        .catch((err) => console.log(err));
     }
   };
 
@@ -57,40 +61,45 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Post A Vent:</h1>
+              <h1>Vent It Out:</h1>
             </Jumbotron>
             <form>
               <Input
-                value={this.state.userName}
+                value={this.state.postTitle}
                 onChange={this.handleInputChange}
-                name="userName"
-                placeholder="Username (required)"
+                name="postTitle"
+                placeholder="Vent Title"
               />
               <TextArea
                 value={this.state.userPost}
                 onChange={this.handleInputChange}
                 name="userPost"
-                placeholder="Post (Optional)"
+                placeholder="Start Venting"
+              />
+              <CharLeft
+                value={this.state.charLeft}
+                onChange={this.handleInputChange}
               />
               <FormBtn
-                disabled={!(this.state.userName)}
+                disabled={!this.state.postTitle}
                 onClick={this.handleFormSubmit}
               >
-                Submit Post
+                Submit Vent
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Posts On My List</h1>
+              <h1>Vent List:</h1>
             </Jumbotron>
             {this.state.posts.length ? (
               <List>
-                {this.state.posts.map(post => (
+                {this.state.posts.map((post) => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
-                        {post.userName} says:
+                        Venting About:
+                        {" " + post.postTitle}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteUserPost(post._id)} />

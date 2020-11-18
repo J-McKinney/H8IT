@@ -8,7 +8,7 @@ class Detail extends Component {
   state = {
     post: {},
   };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
+  // When this component mounts, grab the post with the _id of this.props.match.params.id
   // e.g. localhost:3000/books/........
   componentDidMount() {
     API.getUserPost(this.props.match.params.id)
@@ -22,14 +22,14 @@ class Detail extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1>{this.state.post.userName} says:</h1>
+              <h1>Venting About: {this.state.post.postTitle}</h1>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>User Post</h1>
+              <h1>Vent:</h1>
               <p>{this.state.post.userPost}</p>
             </article>
           </Col>
