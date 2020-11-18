@@ -94,7 +94,7 @@ class Books extends Component {
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
-                        Venting About:
+                        Vented:
                         {" " + post.postTitle}
                       </strong>
                     </Link>
