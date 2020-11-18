@@ -76,10 +76,12 @@ class Books extends Component {
                 name="userPost"
                 placeholder="Start Venting"
               />
+
               <CharLeft
                 value={this.state.charLeft}
                 onChange={this.handleInputChange}
               />
+              
               <FormBtn
                 disabled={!this.state.postTitle}
                 onClick={this.handleFormSubmit}
