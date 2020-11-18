@@ -5,7 +5,7 @@ const postSchema = new Schema({
   userName: { type: String, required: true },
   userPost: String,
   dateCreated: { type: Date, default: Date.now },
-  expire_at: { type: Date, default: Date.now, expires: 60 }, // the document expires after however many seconds
+  expire_at: { type: Date, default: Date.now, expires: 900 }, // the document expires after 60*15=15 minutes
 });
 
 const Post = mongoose.model("Post", postSchema);
