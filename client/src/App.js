@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import DashBoard from "./pages/DashBoard";
+import Login from "./pages/Login";
 import Posts from "./pages/Posts";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -11,7 +13,8 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Posts} />
+          <Route exact path="/" component={DashBoard} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/posts" component={Posts} />
           <Route exact path="/posts/:id" component={Detail} />
           <Route component={NoMatch} />
