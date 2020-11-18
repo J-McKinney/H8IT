@@ -18,9 +18,6 @@ class Books extends Component {
   componentDidMount() {
     this.loadPosts();
   }
-  componentDidUpdate() {
-    console.log("Update: " + this.state.charLeft);
-  }
 
   loadPosts = () => {
     API.getUserPosts()
@@ -76,12 +73,9 @@ class Books extends Component {
                 name="userPost"
                 placeholder="Start Venting"
               />
-
-              <CharLeft
-                value={this.state.charLeft}
-                onChange={this.handleInputChange}
-              />
-              
+              <CharLeft value={this.state.charLeft}>
+                {this.state.charLeft - this.state.userPost.length}
+              </CharLeft>
               <FormBtn
                 disabled={!this.state.postTitle}
                 onClick={this.handleFormSubmit}
