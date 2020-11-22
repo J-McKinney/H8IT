@@ -6,7 +6,7 @@ export function SwearButton(props) {
     <span
       {...props}
       style={{ float: "center", marginBottom: 10 }}
-      className="swear-Button"
+      className="swear-button"
       role="button"
       tabIndex="0"
     >
@@ -20,7 +20,7 @@ export function VentButton(props) {
     <span
       {...props}
       style={{ float: "center", marginBottom: 10 }}
-      className="vent-Button"
+      className="vent-button"
       role="button"
       tabIndex="0"
     >
@@ -34,7 +34,7 @@ export function TearButton(props) {
     <span
       {...props}
       style={{ float: "center", marginBottom: 10 }}
-      className="tear-Button"
+      className="tear-button"
       role="button"
       tabIndex="0"
     >
