@@ -8,7 +8,7 @@ class DashBoard extends Component {
         <Jumbotron>
           <h1>Welcome To Vent</h1>
           <hr />
-          <h3>Connect with others and Vent.</h3>
+          <h3>Connect with others and Vent about it.</h3>
         </Jumbotron>
       </>
     );

@@ -19,7 +19,7 @@ class Error extends Component {
             </Row>
             <Row className={Style.eRow}>
               <div className={Style.eh2}>
-                Wellp, now you did it. Broke the damn computer. You probably
+                Wellp, now you did it. You broke your computer. You probably
                 didn't even do anything major, did you? But see, I'm the dreaded
                 Blue Screen of Death, and I pop up totally randomly, and most
                 times, for no good gah-darn reason.
@@ -28,8 +28,8 @@ class Error extends Component {
             <Row className={Style.eRow}>
               <div className={Style.eh2}>
                 You're probably sweatin' bullets right now, aren't you? I love
-                it. So, there are a couple options you could try, neither of
-                which will work whatsoever, but heck, be my guest.
+                it! So, there are a couple options you could try, neither of
+                which will work whatsoever, but hey, be my guest.
               </div>
             </Row>
             <Row className={Style.eRow}>
@@ -37,10 +37,9 @@ class Error extends Component {
                 <li>
                   <div className={Style.eh2}>
                     Hit CTRL+ALT+DEL. This will restart me. But, everything
-                    you've done on me up until this point will be gone. Tough
-                    CRUD. But if you're into downloading weird online GIF's
+                    you've done on me up until this point will be gone. Womp,
+                    womp. But if you're into downloading weird online GIF's
                     (which you are), I'm guessing this isn't a terrible option.
-                    Pervert.
                   </div>
                 </li>
                 <br />
