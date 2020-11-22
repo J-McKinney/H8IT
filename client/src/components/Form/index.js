@@ -1,6 +1,7 @@
 import React from "react";
 
-// This file exports the Input, TextArea, and FormBtn components
+// This file exports the Input, TextArea, and FormBtn components along with letting the user know how many characters they have
+// left for each individual post
 
 export function Input(props) {
   return (
