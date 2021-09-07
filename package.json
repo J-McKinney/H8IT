@@ -5,7 +5,11 @@
   "main": "server.js",
   "author": "Jesse MᶜKinney",
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "vent",
+    "it",
+    "out"
+  ],
   "repository": {
     "type": "git",
     "url": "H8IT"
