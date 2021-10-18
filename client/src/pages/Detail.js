@@ -36,7 +36,7 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to All Posts</Link>
+            <Link to="/posts">← Back to All Posts</Link>
           </Col>
         </Row>
       </Container>
